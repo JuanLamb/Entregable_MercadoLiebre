@@ -66,7 +66,17 @@ header nav div button i {
     font-size: 16px;
 }
 
-body section img {
+section img#banner {
+    width: 100%;
+}
+
+main section article {
+    background-color: #fff;
+    margin: auto;
+    width: 90%;
+}
+
+main section article img {
     width: 100%;
 }
 
