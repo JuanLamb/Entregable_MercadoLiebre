@@ -6,6 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href='/css/styles.css' />
+        <link rel="stylesheet" href="/css/normalize.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
@@ -17,7 +18,10 @@
 <body>
     <header>
         <img src="/images/logo-mercado-liebre.svg" width="360" alt="Logo de MercadoLiebre">
-        <input type="text" placeholder="Buscar productos, marcas">
+
+        <div class="buscador">
+            <input type="text" placeholder="Buscar productos, marcas">
+        </div>
 
         <div class= "wrapper">
             <button id="searchButton" type="submit"><i class="fas fa-search"></i></button>
@@ -50,7 +54,7 @@
         </nav>
     </header>
     <section>
-        <img src="/images/img-home-banner.jpg" width="360" alt="Banner de ofertas">
+        <img src="/images/img-home-banner.jpg" alt="Banner de ofertas">
     </section>
     <main>
         <section>
