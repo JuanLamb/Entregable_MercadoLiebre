@@ -19,14 +19,13 @@ header img {
 }
 
 header div input {
-    border-radius: 5px;
     margin: 0 0 0 15px;
     width: 180px;
     border: 1px solid #000;
 }
 
-header .wrapper {
-    margin-left: 15px;
+header .hamburguer {
+    text-align: center;
 }
 
 header div button {
@@ -35,6 +34,11 @@ header div button {
 
 header p {
     text-align: center;
+}
+
+header .site-navbar,
+header .login-navbar {
+    display: none;
 }
 
 header nav ul li a {
@@ -47,12 +51,8 @@ header nav ul {
     padding: 0;
 }
 
-header nav div {
-    text-align: center;
-}
-
 header nav div button {
-    background-color:#1259c3;
+    background-color:#03264C;
     border-radius: 5px;
     height: 35px;
     width: 35px;
@@ -66,18 +66,13 @@ header nav div button i {
     font-size: 16px;
 }
 
-section img#banner {
+section img {
     width: 100%;
 }
 
-main section article {
-    background-color: #fff;
+main {
+    width: 90vw;
     margin: auto;
-    width: 90%;
-}
-
-main section article img {
-    width: 100%;
 }
 
 main section h3 {
@@ -85,16 +80,48 @@ main section h3 {
     color: #666;
 }
 
-.precio {
-    font-size: 18px;
+main section article {
+    background-color: #fff;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+main .caracteristicasArticulo {
+    border-top: solid 1px #ebebeb;
+    padding: 15px;
 }
 
 main section article p {
     font-size: 16px;
+    margin: 0;
 }
 
-h4 {
+main section article i {
+    color: #39b54a;
+}
+
+main .circulo {
+    border: solid 1px #39b54a;
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+}
+
+main .precio {
+    font-size: 18px;
+}
+
+main .descuento {
+    color: #39b54a;
+}
+
+main h4 {
     font-size: 16px;
+    margin: 0;
+    color: #666;
+    font-weight: 400;
+    margin-top: 25px;
+    display: none;
 }
 
 footer {
@@ -138,7 +165,30 @@ footer section article h5{
     font-weight: lighter;
 }
 
-#copyright{
+.copyright{
     padding-left: 15px;
     text-align: left;
+}
+
+@media (min-width: 361px) {
+    main h4 {
+        display: flex;
+    }
+    header .site-navbar,
+    header .login-navbar {
+    display: flex;
+    }
+    header .hamburguer {
+        display: none;
+    }
+    header img {
+        width: 200px;
+    }
+    main section article {
+        box-shadow: 0px 0px 10px 0px rgb(100, 100, 100);
+    }
+}
+
+@media (min-width: 769px) {
+    
 }
