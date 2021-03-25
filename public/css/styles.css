@@ -1,4 +1,6 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 body {
@@ -7,33 +9,56 @@ body {
     background-color: #ebebeb;
 }
 
+
+/* ================= HEADER ======================= */
+
 header {
     width: 100%;
     background-color: #EAC926;
 }
-
-header img {
-    width: 150px;
-    padding: 15px;
-    margin-left: 15px;
+header .logo-search {
+    display: flex;
+    padding: 25px;
+    align-items: center;
 }
 
-header div input {
-    margin: 0 0 0 15px;
-    width: 180px;
-    border: 1px solid #000;
+header img {
+    width: 50%;
+}
+
+header .buscador{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+header .buscador input {
+    padding: 5px;
+    height: 35px;
+    width: 80%;
+    border: 0;
+    border-radius: 5px 0 0 5px;
 }
 
 header .hamburguer {
     text-align: center;
 }
 
-header div button {
-    padding: 0 0 0 0;
+header .buscador button {
+    border: 0px #fff;
+    background-color: #fff;
+    border-radius: 0 5px 5px 0;
+    color: #666;
+    padding: 2px;
 }
 
 header p {
     text-align: center;
+}
+
+header .main-navbar {
+    display: flex;
+    justify-content: center;
 }
 
 header .site-navbar,
@@ -48,11 +73,10 @@ header nav ul li a {
 
 header nav ul {
     list-style-type: none;
-    padding: 0;
 }
 
 header nav div button {
-    background-color:#03264C;
+    background-color:#1259c3;;
     border-radius: 5px;
     height: 35px;
     width: 35px;
@@ -66,29 +90,40 @@ header nav div button i {
     font-size: 16px;
 }
 
-section img {
-    width: 100%;
+/* ================= BANNER ======================= */
+
+.banner {
+    width: 100vw;
 }
+
+/* ================= MAIN ========================== */
 
 main {
     width: 90vw;
     margin: auto;
 }
 
+main img {
+    width: 100%;
+}
+
 main section h3 {
     font-size: 24px;
     color: #666;
+    margin: 15px 0 15px 0;
 }
 
 main section article {
     background-color: #fff;
-    margin: auto;
-    margin-bottom: 10px;
+    margin: 10px;
 }
 
 main .caracteristicasArticulo {
     border-top: solid 1px #ebebeb;
     padding: 15px;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
 }
 
 main section article p {
@@ -98,21 +133,26 @@ main section article p {
 
 main section article i {
     color: #39b54a;
-}
-
-main .circulo {
-    border: solid 1px #39b54a;
-    width: 40px;
-    height: 40px;
-    border-radius: 25px;
+    display: block;
+    padding: 7px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
 }
 
 main .precio {
     font-size: 18px;
+    flex: 1 1 30%;
 }
 
 main .descuento {
     color: #39b54a;
+    flex: 1 1 70%;
 }
 
 main h4 {
@@ -122,7 +162,10 @@ main h4 {
     font-weight: 400;
     margin-top: 25px;
     display: none;
+    flex: 1 1 100%;
 }
+
+/* ================= FOOTER ======================= */
 
 footer {
     background-color: #fff;
@@ -170,25 +213,78 @@ footer section article h5{
     text-align: left;
 }
 
+/* ================= MEDIAQUERIES ======================= */
+
 @media (min-width: 361px) {
-    main h4 {
+
+    header {
         display: flex;
+        flex-flow: row wrap;
+        align-items: center;
     }
+
+    header .logo-search {
+        flex: 1 1 50%;
+    }
+
+    header p {
+        flex: 1 1 30%;
+        text-align: left;
+    }
+
+    header .main-navbar {
+        flex: 1 1 100%;
+    }
+
+    header .main-navbar {
+        padding: 15px;
+        justify-content: space-between;
+    }
+
     header .site-navbar,
     header .login-navbar {
     display: flex;
+    width: 40%;
     }
+
+    header ul {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
     header .hamburguer {
         display: none;
     }
+
     header img {
-        width: 200px;
+        width: 160px;
     }
+
     main section article {
         box-shadow: 0px 0px 10px 0px rgb(100, 100, 100);
+    }
+
+    main h4 {
+        display: flex;
+    }
+
+    main section {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    main h3 {
+        flex: 1 1 100%;
+    }
+
+    main section article {
+        flex: 1 1 40%;
     }
 }
 
 @media (min-width: 769px) {
-    
+    main section article {
+        flex: 1 1 20%;
+    }
 }
