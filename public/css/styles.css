@@ -12,10 +12,15 @@ body {
 
 /* ================= HEADER ======================= */
 
-header {
+.header {
     width: 100%;
     background-color: #EAC926;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    min-height: 173.9px;
 }
+
 header .logo-search {
     display: flex;
     padding: 25px;
@@ -92,6 +97,9 @@ header nav div button i {
 
 /* ================= BANNER ======================= */
 
+.section-banner{
+    margin-top: 173.9px;
+} 
 .banner {
     width: 100vw;
 }
@@ -160,13 +168,17 @@ main h4 {
     margin: 0;
     color: #666;
     font-weight: 400;
-    margin-top: 25px;
-    display: none;
+    height: 0;
+    opacity: 0;
     flex: 1 1 100%;
+    transition: all 300ms;
 }
 
 /* ================= /register ======================= */
 
+.formMain{
+    margin-top: 173.9px;
+}
 main form{
     display: flex;
     flex-flow: column wrap;
@@ -267,6 +279,10 @@ main .buttons button a{
     width: 100%;
 }
 
+.login button:hover {
+    background-color: #0022AA;
+}
+
 .login button a{
     text-decoration: none;
     color: #fff;
@@ -278,8 +294,18 @@ main .buttons button a{
 footer {
     background-color: #fff;
     margin: auto;
-    width: 97%;
+    width: 100%;
     padding-top: 3px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+footer .comentarioFooter {
+    flex: 1 1 33%;
+}
+
+footer .copyrightFooter{
+    flex: 1 1 100%;
 }
 
 footer section article {
@@ -304,6 +330,10 @@ footer i {
     font-size: 2em;
     margin-bottom: 10px;
     color: #1259c3;
+}
+
+footer i:hover {
+    color: #0022AA;
 }
 
 footer article {
@@ -369,12 +399,15 @@ footer section article h5{
         width: 160px;
     }
 
-    main section article {
+    main section article:hover {
         box-shadow: 0px 0px 10px 0px rgb(100, 100, 100);
     }
 
-    main h4 {
-        display: flex;
+    main article:hover h4 {
+        display: block;
+        margin-top: 25px;
+        height:auto;
+        opacity: 1;
     }
 
     main section {
