@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const port = process.env.PORT
 const path = require('path');
 app.use(express.static('public'));
 
@@ -18,6 +18,6 @@ app.get('/register', (req, res) => {
 });
 
 
-app.listen(process.env.PORT || port, () => {
-    console.log('Servidor escuchando en puerto '+ port);
+app.listen(port || 3000, () => {
+    console.log('Servidor corriendo en puerto '+ port);
 });
